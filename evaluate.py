@@ -52,7 +52,7 @@ def main():
 
     lb = pd.concat([lb, pd.DataFrame([rec])], ignore_index=True)
 
-    lb.sort_values("score", ascending=False, inplace=True)
+    lb.sort_values("score", ascending=True, inplace=True)
 
     if "rank" in lb.columns:
         lb = lb.drop(columns=["rank"])
