@@ -3,7 +3,7 @@ import os
 
 df = pd.read_csv("leaderboard.csv")
 
-df = df.sort_values("score", ascending=False).reset_index(drop=True)
+df = df.sort_values("score", ascending=True).reset_index(drop=True)
 
 if "rank" in df.columns:
     df = df.drop(columns=["rank"])
