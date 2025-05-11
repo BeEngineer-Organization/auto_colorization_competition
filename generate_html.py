@@ -14,7 +14,7 @@ df.insert(
     0,
     "rank",
     df["score"]
-      .rank(method="min", ascending=False)  
+      .rank(method="min", ascending=True)  
       .astype(int)                          
       .values
 )
