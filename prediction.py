@@ -1,11 +1,10 @@
 import os
 import numpy as np
 import pandas as pd
-import tensorflow as tf
 from tensorflow.keras.models import load_model
 from PIL import Image
 from datetime import datetime
-from tqdm import tqdm  # 1. tqdmをインポート
+from tqdm import tqdm  
 
 def main():
     model_path = "model/best_model.keras"
