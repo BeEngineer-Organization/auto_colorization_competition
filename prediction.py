@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from PIL import Image
 from datetime import datetime
-
+from tqdm import tqdm  # 1. tqdmをインポート
 
 def main():
     model_path = "model/best_model.keras"
@@ -24,7 +24,7 @@ def main():
 
     mse_vals = []
 
-    for fname in files:
+    for fname in tqdm(files, desc="画像を評価中"):
         img_gray = (
             Image.open(os.path.join(gray_dir, fname))
             .convert("L")
