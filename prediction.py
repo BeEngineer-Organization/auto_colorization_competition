@@ -27,7 +27,7 @@ def main():
         img_gray = (
             Image.open(os.path.join(gray_dir, fname))
             .convert("L")
-            .resize((32, 32), Image.BILINEAR)
+            .resize((128, 128), Image.BILINEAR)
         )
         arr_gray = np.array(img_gray, dtype=np.float32) / 255.0
         arr_gray = arr_gray[..., None][None, ...]
@@ -37,7 +37,7 @@ def main():
         img_gt = (
             Image.open(os.path.join(gt_dir, fname))
             .convert("RGB")
-            .resize((32, 32), Image.BILINEAR)
+            .resize((128, 128), Image.BILINEAR)
         )
         arr_gt = np.array(img_gt, dtype=np.float32) / 255.0
 
