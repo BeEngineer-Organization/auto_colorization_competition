@@ -52,7 +52,7 @@
    │   └── index.html
    ├── evaluate.py
    ├── generate_html.py
-   ├── model
+   ├── models
    │   └── best_model.keras
    ├── prediction.py
    └── requirements.txt
