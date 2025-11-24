@@ -4,10 +4,10 @@ import pandas as pd
 from tensorflow.keras.models import load_model
 from PIL import Image
 from datetime import datetime
-from tqdm import tqdm  
+from tqdm import tqdm
 
 def main():
-    model_path = "models/best_model.keras"
+    model_path = "models/best_model_murao.keras"
     gray_dir = "data/test_gray"
     gt_dir = "data/ground_truth"
     out_csv = "submission.csv"
